@@ -1,0 +1,87 @@
+name: Release
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  NODE_VERSION: 18
+  NODE_CACHE: "yarn"
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3.5.3
+      - name: Setup Node
+        uses: actions/setup-node@v3.7.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: ${{ env.NODE_CACHE }}
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      - name: Build libraries
+        run: yarn build
+      - name: Cache builds
+        uses: actions/cache@v3.3.1
+        with:
+          path: ${{ github.workspace }}/packages/*/dist
+          key: ${{ github.ref }}-${{ github.sha }}
+
+  test:
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3.5.3
+        with:
+          fetch-depth: 0
+      - name: Setup Node
+        uses: actions/setup-node@v3.7.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: ${{ env.NODE_CACHE }}
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      - name: Check eslint
+        run: yarn lint
+      - name: Check prettier
+        run: yarn prettify
+      - name: Check changelog
+        if: github.ref != 'refs/heads/main' && github.head_ref != 'changeset-release/main'
+        run: |
+          git pull -f origin main:main
+          yarn changelog
+
+  release:
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3.5.3
+      - uses: actions/setup-node@v3.7.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: ${{ env.NODE_CACHE }}
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      - name: Restore cached builds
+        uses: actions/cache@v3.3.1
+        with:
+          path: ${{ github.workspace }}/packages/*/dist
+          key: ${{ github.ref }}-${{ github.sha }}
+      - name: Create/Update release PR or publish to NPM
+        uses: changesets/action@v1.4.5
+        with:
+          publish: yarn release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GIT_CI_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_CI_TOKEN }}
