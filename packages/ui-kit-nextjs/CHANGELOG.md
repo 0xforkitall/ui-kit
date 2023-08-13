@@ -1,5 +1,16 @@
 # @0xforkitall/ui-kit-nextjs
 
+## 0.3.0
+
+### Minor Changes
+
+-   [#3](https://github.com/0xforkitall/ui-kit/pull/3) [`d098c2b`](https://github.com/0xforkitall/ui-kit/commit/d098c2bb0235c2b6345a62fbf7c9b0c89ef42207) Thanks [@0xforkitall](https://github.com/0xforkitall)! - Add components to ui-kit and ui-kit-nextjs packages
+
+### Patch Changes
+
+-   Updated dependencies [[`d098c2b`](https://github.com/0xforkitall/ui-kit/commit/d098c2bb0235c2b6345a62fbf7c9b0c89ef42207)]:
+    -   @0xforkitall/ui-kit@0.3.0
+
 ## 0.2.0
 
 ### Minor Changes
