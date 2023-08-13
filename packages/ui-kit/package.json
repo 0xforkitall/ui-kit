@@ -7,7 +7,7 @@
   "files": [
     "dist",
     "src/**/*.{scss}",
-    "src/assets/fonts/*.*",
+    "src/assets/fonts/*",
     "styles.scss"
   ],
   "license": "MIT",
@@ -22,12 +22,16 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "react": "^18.2.0"
+    "classnames": "^2.3.2",
+    "react": "^18.2.0",
+    "react-markdown": "^8.0.7",
+    "react-syntax-highlighter": "^15.5.0"
   },
   "devDependencies": {
-    "@0xforkitall/eslint-config": "^1.0.2",
+    "@0xforkitall/eslint-config": "^1.1.0",
     "@0xforkitall/rollup-config": "^0.1.1",
     "@types/react": "^18.2.20",
+    "@types/react-syntax-highlighter": "^15.5.7",
     "cross-env": "^7.0.3",
     "rollup": "^3.28.0"
   },

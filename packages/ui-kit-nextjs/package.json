@@ -22,7 +22,9 @@
   },
   "dependencies": {
     "@0xforkitall/ui-kit": "^0.2.0",
-    "next": "^13.4.13"
+    "next": "^13.4.13",
+    "next-seo": "^6.1.0",
+    "react": "^18.2.0"
   },
   "devDependencies": {
     "@0xforkitall/eslint-config-nextjs": "^1.0.2",
