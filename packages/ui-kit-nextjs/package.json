@@ -1,6 +1,6 @@
 {
   "name": "@0xforkitall/ui-kit-nextjs",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "NextJs components for the ui-kit",
   "main": "dist/index.es.js",
   "types": "dist/types/index.d.ts",
@@ -21,7 +21,7 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@0xforkitall/ui-kit": "^0.3.0",
+    "@0xforkitall/ui-kit": "^0.3.1",
     "next": "^13.4.13",
     "next-seo": "^6.1.0",
     "react": "^18.2.0",

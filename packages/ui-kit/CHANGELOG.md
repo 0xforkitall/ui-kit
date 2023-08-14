@@ -1,5 +1,15 @@
 # @0xforkitall/ui-kit
 
+## 0.3.1
+
+### Patch Changes
+
+-   [#9](https://github.com/0xforkitall/ui-kit/pull/9) [`9ac52ae`](https://github.com/0xforkitall/ui-kit/commit/9ac52ae97186260a40b814e66860e5ff0b3d7b30) Thanks [@0xforkitall](https://github.com/0xforkitall)! - Use ES as default format, update rollup and eslint config dependencies
+
+-   [#7](https://github.com/0xforkitall/ui-kit/pull/7) [`c8fe22b`](https://github.com/0xforkitall/ui-kit/commit/c8fe22b1f8c18f05dcb83f3bd47d2cfabe0091f0) Thanks [@renovate](https://github.com/apps/renovate)! - Update lint-staged root dependency to v14
+
+-   [#6](https://github.com/0xforkitall/ui-kit/pull/6) [`13e8e54`](https://github.com/0xforkitall/ui-kit/commit/13e8e54b14805ebd093d599932097004e34b26db) Thanks [@renovate](https://github.com/apps/renovate)! - Update actions/setup-node action to v3.8.0
+
 ## 0.3.0
 
 ### Minor Changes
