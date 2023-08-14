@@ -6,7 +6,7 @@
   "types": "dist/types/index.d.ts",
   "files": [
     "dist",
-    "src/**/*.{scss}",
+    "src/**/*.{scss,css}",
     "src/assets/fonts/*",
     "styles.scss"
   ],
@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@0xforkitall/eslint-config": "^1.2.0",
-    "@0xforkitall/rollup-config": "^0.2.0",
+    "@0xforkitall/rollup-config": "^0.2.2",
     "@types/react": "^18.2.20",
     "@types/react-syntax-highlighter": "^15.5.7",
     "cross-env": "^7.0.3",

@@ -24,10 +24,10 @@
     eslint-plugin-react-hooks "^4.6.0"
     eslint-plugin-testing-library "^6.0.0"
 
-"@0xforkitall/rollup-config@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@0xforkitall/rollup-config/-/rollup-config-0.2.0.tgz#da79fb9b3b24942a278a308a72b9fdeabd315552"
-  integrity sha512-knuuHt36kJBYqfMVkv8RYBvt5Ek1DfGPWN83E7Hdq7iJG+RmoU3ql9xxPlkEdwwMknR+KoOLpM1GMWtDuQ1Cyw==
+"@0xforkitall/rollup-config@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@0xforkitall/rollup-config/-/rollup-config-0.2.2.tgz#692afb9567d0db2aaea5642546e3e613ece5905f"
+  integrity sha512-/b6OtFUjwVg7+XyZ3dcVxhKT5+tVHL2xAMKGKafG1puHQl5mjd1RdjDoQQNAwo7T97QDpx/UL5ITkd4eTukNgQ==
   dependencies:
     "@rollup/plugin-commonjs" "^25.0.4"
     "@rollup/plugin-image" "^3.0.2"

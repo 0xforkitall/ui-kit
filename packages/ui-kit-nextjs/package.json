@@ -6,7 +6,7 @@
   "types": "dist/types/index.d.ts",
   "files": [
     "dist",
-    "src/**/*.{scss}",
+    "src/**/*.{scss,css}",
     "styles.scss"
   ],
   "license": "MIT",
@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "@0xforkitall/eslint-config-nextjs": "^1.1.1",
-    "@0xforkitall/rollup-config": "^0.2.0"
+    "@0xforkitall/rollup-config": "^0.2.2"
   },
   "keywords": [
     "design-system",
