@@ -1,5 +1,14 @@
 # @0xforkitall/ui-kit-nextjs
 
+## 0.3.2
+
+### Patch Changes
+
+-   [`a9b2539`](https://github.com/0xforkitall/ui-kit/commit/a9b2539c260133be077603591ad568a21311192d) Thanks [@0xforkitall](https://github.com/0xforkitall)! - Fix ui-kit and ui-kit-nextjs build files
+
+-   Updated dependencies [[`a9b2539`](https://github.com/0xforkitall/ui-kit/commit/a9b2539c260133be077603591ad568a21311192d)]:
+    -   @0xforkitall/ui-kit@0.3.2
+
 ## 0.3.1
 
 ### Patch Changes
