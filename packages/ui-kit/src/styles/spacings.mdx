@@ -1,7 +1,43 @@
 import { Meta } from '@storybook/blocks';
 
-<Meta title="Design System/Spacings" />
+<Meta title="Design System/Spacing" />
 
-# Spacings
+export const Spacer = ({ spacer }) => (
+    <span
+        style={{
+            backgroundColor: `var(--0xf-color-primary)`,
+            display: 'block',
+            width: `var(${spacer})`,
+            height: 15,
+        }}
+    />
+);
 
-TODO
+# Spacing
+
+Spacing is a crucial aspect of design, allowing for proper alignment, separation, and layout of UI elements.
+The UI Kit defines a set of spacing variables that can be used to ensure consistent and harmonious spacing throughout
+your application.
+
+## Spacing Variables
+
+The UI Kit provides a range of spacing variables based on a base value of 16px. Here's an overview of the available
+spacing variables and their corresponding values:
+
+-   **Spacer 0:** `--0xf-spacer-0` <Spacer spacer="--0xf-spacer-0" />
+-   **Spacer 25:** `--0xf-spacer-25` <Spacer spacer="--0xf-spacer-25" />
+-   **Spacer 50:** `--0xf-spacer-50` <Spacer spacer="--0xf-spacer-50" />
+-   **Spacer 75:** `--0xf-spacer-75` <Spacer spacer="--0xf-spacer-75" />
+-   **Spacer 100:** `--0xf-spacer-100` <Spacer spacer="--0xf-spacer-100" />
+-   **Spacer 125:** `--0xf-spacer-125` <Spacer spacer="--0xf-spacer-125" />
+-   **Spacer 150:** `--0xf-spacer-150` <Spacer spacer="--0xf-spacer-150" />
+-   **Spacer 200:** `--0xf-spacer-200` <Spacer spacer="--0xf-spacer-200" />
+-   **Spacer 250:** `--0xf-spacer-250` <Spacer spacer="--0xf-spacer-250" />
+-   **Spacer 300:** `--0xf-spacer-300` <Spacer spacer="--0xf-spacer-300" />
+-   **Spacer 400:** `--0xf-spacer-400` <Spacer spacer="--0xf-spacer-400" />
+-   **Spacer 500:** `--0xf-spacer-500` <Spacer spacer="--0xf-spacer-500" />
+-   **Spacer 600:** `--0xf-spacer-600` <Spacer spacer="--0xf-spacer-600" />
+
+These spacing variables can be applied consistently across your UI components and layouts to maintain a balanced and
+visually appealing design. By using these variables, you can easily achieve spacing that aligns with your design
+system's guidelines and enhances the overall user experience.
