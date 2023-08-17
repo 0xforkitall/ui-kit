@@ -39,11 +39,11 @@
   --0xf-color-red-900: #7f1d1d;
 
   /* Green colors */
-  --0xf-color-red-100: #dcfce7;
-  --0xf-color-red-300: #86efac;
-  --0xf-color-red-500: #22c55e;
-  --0xf-color-red-700: #15803d;
-  --0xf-color-red-900: #14532d;
+  --0xf-color-green-100: #dcfce7;
+  --0xf-color-green-300: #86efac;
+  --0xf-color-green-500: #22c55e;
+  --0xf-color-green-700: #15803d;
+  --0xf-color-green-900: #14532d;
 
   /* Aliases */
   --0xf-color-inherit: inherit;
@@ -56,7 +56,7 @@
   --0xf-color-surface: var(--0xf-color-gray-900);
   --0xf-color-divider: var(--0xf-color-gray-700);
 
-  --0xf-color-success: var(--0xf-color-red-500);
+  --0xf-color-success: var(--0xf-color-green-500);
   --0xf-color-error: var(--0xf-color-red-500);
   --0xf-color-warning: var(--0xf-color-orange-500);
 

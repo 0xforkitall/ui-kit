@@ -4,6 +4,10 @@ import { Link as LinkComponent } from '../link';
 import { Text } from '../text';
 import type { IBreadcrumbsProps } from './breadcrumbs.api';
 
+/**
+ * The Breadcrumbs component is a React component designed to display a navigational trail in the form of breadcrumbs,
+ * aiding user orientation within a website or application.
+ */
 export const Breadcrumbs: React.FC<IBreadcrumbsProps> = (props) => {
     const { routes, className, Link = LinkComponent } = props;
 

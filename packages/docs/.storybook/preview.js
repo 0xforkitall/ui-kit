@@ -5,6 +5,11 @@ import '../../ui-kit/styles.scss';
 const preview = {
     parameters: {
         actions: { argTypesRegex: '^on[A-Z].*' },
+        options: {
+            storySort: {
+                order: ['Docs', 'Design System', 'UI Kit', 'UI Kit NextJs'],
+            },
+        },
         controls: {
             matchers: {
                 color: /(background|color)$/i,
@@ -12,6 +17,13 @@ const preview = {
             },
         },
     },
+    decorators: [
+        (Story) => (
+            <div style={{ display: 'flex' }}>
+                <Story />
+            </div>
+        ),
+    ],
 };
 
 export default preview;

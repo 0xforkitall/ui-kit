@@ -10,7 +10,7 @@ function getAbsolutePath(value) {
 
 /** @type { import('@storybook/react-webpack5').StorybookConfig } */
 const config = {
-    stories: ['../../**/*.stories.@(js|jsx|mjs|ts|tsx)'],
+    stories: ['../../**/*.stories.@(js|jsx|mjs|ts|tsx)', '../../ui-kit/**/*.mdx', '../doc/*.mdx'],
     addons: [
         getAbsolutePath('@storybook/addon-links'),
         getAbsolutePath('@storybook/addon-essentials'),
@@ -29,6 +29,25 @@ const config = {
     },
     docs: {
         autodocs: 'tag',
+    },
+    webpackFinal: (webpackConfig) => {
+        // Custom image rule to exclude `.svg` files since we handle those with `@svgr/webpack`.
+        const imageRule = webpackConfig.module.rules.find((rule) => {
+            if (typeof rule !== 'string' && rule.test instanceof RegExp) {
+                return rule.test.test('.svg');
+            }
+        });
+
+        if (typeof imageRule !== 'string') {
+            imageRule.exclude = /\.svg$/;
+        }
+
+        webpackConfig.module.rules.push({
+            test: /\.svg$/,
+            use: ['@svgr/webpack'],
+        });
+
+        return webpackConfig;
     },
 };
 export default config;

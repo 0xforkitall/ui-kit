@@ -1,0 +1,44 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="UI Kit/Hooks/useDidScroll" />
+
+# useDidScroll
+
+The `useDidScroll` hook is a custom React hook that allows you to determine whether the user has scrolled below a
+specified element or the main window object.
+
+## Usage
+
+```jsx
+import { useDidScroll } from '@0xforkitall/ui-kit';
+
+const ScrollStatus = () => {
+    const scrolled = useDidScroll();
+
+    return (
+        <div>
+            <p>{scrolled ? 'User has scrolled' : 'User has not scrolled yet'}</p>
+        </div>
+    );
+};
+```
+
+## Parameters
+
+The `useDidScroll` hook takes an optional parameter:
+
+### `elementSelector` (string, optional)
+
+Selector element to attach the scroll listener to. Defaults to the window object. This allows you to track scrolling
+behavior within a specific element rather than the whole page.
+
+## Return Value
+
+The `useDidScroll` hook returns a boolean value indicating whether the user has scrolled below the specified element
+or the main window object.
+
+## Notes
+
+-   The `useDidScroll` hook helps to avoid attaching multiple scroll listeners to the same element by using a listeners set.
+-   It uses the `didScrollListeners` set to manage and notify listeners about scrolling behavior.
+-   The hook adds a scroll listener to the specified element or the window object and updates the state based on scrolling events.

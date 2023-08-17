@@ -3,6 +3,9 @@ import { forwardRef } from 'react';
 import { Icon } from '../icon';
 import type { IButtonProps } from './button.api';
 
+/**
+ * The Button component is a versatile React element designed to create interactive and clickable user interface elements.
+ */
 export const Button = forwardRef<HTMLButtonElement, IButtonProps>((props, ref) => {
     const { className, variant = 'primary', icon, children, ...otherProps } = props;
 
