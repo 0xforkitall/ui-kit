@@ -1,8 +1,8 @@
 'use client';
 
 import { useCallback, useEffect, useState } from 'react';
-import { ColorTheme } from '/types';
-import { colorThemeUtils } from '/utils';
+import { ColorTheme } from '../../types';
+import { colorThemeUtils } from '../../utils';
 
 export interface IUseColorThemeResult {
     /**

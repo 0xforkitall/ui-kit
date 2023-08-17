@@ -3,9 +3,9 @@
 import React from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { a11yDark, a11yLight } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { useColorTheme } from '../../hooks';
+import { ColorTheme } from '../../types';
 import type { ICodeBlockProps } from './code-block.api';
-import { useColorTheme } from '/hooks';
-import { ColorTheme } from '/types';
 
 export const CodeBlock: React.FC<ICodeBlockProps> = ({ inline, children, ...props }) => {
     const { currentTheme } = useColorTheme();

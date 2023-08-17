@@ -1,5 +1,5 @@
+import { ColorTheme } from '../../types';
 import { ssrUtils } from '../ssr-utils';
-import { ColorTheme } from '/types';
 
 class ColorThemeUtils {
     colorThemeList = Object.keys(ColorTheme);

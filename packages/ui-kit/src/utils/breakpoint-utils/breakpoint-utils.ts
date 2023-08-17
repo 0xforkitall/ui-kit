@@ -1,4 +1,4 @@
-import type { Breakpoint } from '/types';
+import type { Breakpoint } from '../../types';
 
 class BreakpointUtils {
     private cssPropertyName = '--0xf-breakpoint';
