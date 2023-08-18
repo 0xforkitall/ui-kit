@@ -13,6 +13,8 @@ concurrency:
 env:
   NODE_VERSION: 18
   NODE_CACHE: "yarn"
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 
 jobs:
   setup:
@@ -115,8 +117,8 @@ jobs:
           path: ${{ github.workspace }}/packages/docs/storybook-static
           key: ${{ github.ref }}-${{ github.sha }}
       - name: Setup environment variables
-        run: yarn vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+        run: yarn vercel pull --yes --environment=production --token=${{ secrets.VERCEL_CI_TOKEN }}
       - name: Prepare Vercel build
-        run: yarn vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+        run: yarn vercel build --prod --token=${{ secrets.VERCEL_CI_TOKEN }}
       - name: Deploy Storybook application
-        run: yarn vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
+        run: yarn vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_CI_TOKEN }}
