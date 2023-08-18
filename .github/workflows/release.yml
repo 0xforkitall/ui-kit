@@ -27,12 +27,14 @@ jobs:
           cache: ${{ env.NODE_CACHE }}
       - name: Install dependencies
         run: yarn install --frozen-lockfile
-      - name: Build libraries
+      - name: Build packages
         run: yarn build
       - name: Cache builds
         uses: actions/cache@v3.3.1
         with:
-          path: ${{ github.workspace }}/packages/*/dist
+          path: |
+            ${{ github.workspace }}/packages/*/dist
+            ${{ github.workspace }}/packages/docs/storybook-static
           key: ${{ github.ref }}-${{ github.sha }}
 
   test:
@@ -53,7 +55,9 @@ jobs:
       - name: Restore cached builds
         uses: actions/cache@v3.3.1
         with:
-          path: ${{ github.workspace }}/packages/*/dist
+          path: |
+            ${{ github.workspace }}/packages/*/dist
+            ${{ github.workspace }}/packages/docs/storybook-static
           key: ${{ github.ref }}-${{ github.sha }}
       - name: Check eslint
         run: yarn lint
@@ -90,3 +94,29 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GIT_CI_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_CI_TOKEN }}
+
+  docs:
+    needs: release
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3.5.3
+      - name: Setup Node
+        uses: actions/setup-node@v3.7.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: ${{ env.NODE_CACHE }}
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      - name: Restore cached build
+        uses: actions/cache@v3.3.1
+        with:
+          path: ${{ github.workspace }}/packages/docs/storybook-static
+          key: ${{ github.ref }}-${{ github.sha }}
+      - name: Setup environment variables
+        run: yarn vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+      - name: Prepare Vercel build
+        run: yarn vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+      - name: Deploy Storybook application
+        run: yarn vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}

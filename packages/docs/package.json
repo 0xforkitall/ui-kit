@@ -3,14 +3,15 @@
   "version": "0.1.0",
   "description": "Documentation for the ui-kit packages",
   "license": "MIT",
+  "private": true,
   "scripts": {
+    "dev": "storybook dev -p 6006",
     "lint": "eslint . --max-warnings 0",
     "lint:fix": "eslint . --fix",
     "prettify": "prettier . --check",
     "prettify:fix": "prettier . --write",
     "type-check": "tsc --noEmit",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build": "storybook build"
   },
   "devDependencies": {
     "@babel/core": "^7.22.10",
@@ -31,6 +32,7 @@
     "react-dom": "^18.2.0",
     "sass": "^1.65.1",
     "storybook": "^7.2.3",
+    "vercel": "^31.4.0",
     "webpack": "^5.88.2"
   },
   "keywords": [
