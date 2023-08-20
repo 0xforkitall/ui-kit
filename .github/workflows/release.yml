@@ -98,9 +98,10 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_CI_TOKEN }}
 
   docs:
-    needs: release
+    # needs: release
+    needs: setup
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
+    # if: github.ref == 'refs/heads/main'
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3.5.3
