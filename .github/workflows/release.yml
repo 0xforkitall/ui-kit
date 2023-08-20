@@ -115,7 +115,9 @@ jobs:
       - name: Restore cached build
         uses: actions/cache@v3.3.1
         with:
-          path: ${{ github.workspace }}/packages/docs/storybook-static
+          path: |
+            ${{ github.workspace }}/packages/*/dist
+            ${{ github.workspace }}/packages/docs/storybook-static
           key: ${{ github.ref }}-${{ github.sha }}
       - name: Setup environment variables
         working-directory: ./packages/docs
