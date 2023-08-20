@@ -26,4 +26,6 @@ next-env.d.ts
 
 # project
 .rollup.cache
+.vercel
 dist
+storybook-static
