@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "@0xforkitall/eslint-config-nextjs": "^1.1.1",
-    "@0xforkitall/rollup-config": "^0.2.2"
+    "@0xforkitall/rollup-config": "^0.3.0"
   },
   "keywords": [
     "design-system",
