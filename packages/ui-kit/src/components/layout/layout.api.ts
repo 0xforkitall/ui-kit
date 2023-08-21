@@ -1,5 +1,5 @@
 import { type HTMLAttributes } from 'react';
-import { type IResponsiveAttribute } from '/types';
+import { type IResponsiveAttribute } from '../../types';
 
 export type LayoutGap =
     | '0'

@@ -1,0 +1,62 @@
+{
+  "name": "@0xforkitall/ui-kit-docs",
+  "version": "0.1.0",
+  "description": "Documentation for the ui-kit packages",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "storybook dev -p 6006",
+    "lint": "eslint . --max-warnings 0",
+    "lint:fix": "eslint . --fix",
+    "prettify": "prettier . --check",
+    "prettify:fix": "prettier . --write",
+    "type-check": "tsc --noEmit",
+    "build": "storybook build"
+  },
+  "dependencies": {
+    "@0xforkitall/ui-kit": "^0.3.2",
+    "@0xforkitall/ui-kit-nextjs": "^0.3.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.10",
+    "@babel/preset-env": "^7.22.10",
+    "@babel/preset-react": "^7.22.5",
+    "@babel/preset-typescript": "^7.22.5",
+    "@storybook/addon-essentials": "^7.2.3",
+    "@storybook/addon-interactions": "^7.2.3",
+    "@storybook/addon-links": "^7.2.3",
+    "@storybook/addon-onboarding": "^1.0.8",
+    "@storybook/addon-styling": "^1.3.6",
+    "@storybook/blocks": "^7.2.3",
+    "@storybook/react": "^7.2.3",
+    "@storybook/react-webpack5": "^7.2.3",
+    "@storybook/testing-library": "^0.2.0",
+    "@svgr/webpack": "^8.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.65.1",
+    "storybook": "^7.2.3",
+    "storybook-dark-mode": "^3.0.1",
+    "vercel": "^31.4.0",
+    "webpack": "^5.88.2"
+  },
+  "keywords": [
+    "documentation",
+    "storybook",
+    "react",
+    "nextjs",
+    "ui-kit",
+    "0xforkitall"
+  ],
+  "homepage": "https://www.0xforkitall.com",
+  "author": {
+    "name": "0xforkitall",
+    "email": "0xforkitall@gmail.com",
+    "url": "https://www.0xforkitall.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/0xforkitall/ui-kit.git",
+    "directory": "packages/ui-kit-docs"
+  }
+}

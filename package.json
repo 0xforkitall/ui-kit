@@ -17,7 +17,7 @@
     "release": "changeset publish"
   },
   "devDependencies": {
-    "@0xforkitall/shared-config": "^1.1.0",
+    "@0xforkitall/shared-config": "^1.2.0",
     "@changesets/changelog-github": "^0.4.8",
     "@changesets/cli": "^2.26.2",
     "eslint": "^8.46.0",

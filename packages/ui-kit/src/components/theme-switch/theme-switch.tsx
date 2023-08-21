@@ -1,10 +1,10 @@
 import classNames from 'classnames';
 import React from 'react';
+import { useColorTheme } from '../../hooks';
+import { ColorTheme } from '../../types';
 import { Button } from '../button';
 import { IconType } from '../icon';
 import type { IThemeSwitchProps } from './theme-switch.api';
-import { useColorTheme } from '/hooks';
-import { ColorTheme } from '/types';
 
 export const ThemeSwitch: React.FC<IThemeSwitchProps> = ({ className }) => {
     const { currentTheme, updateTheme } = useColorTheme();

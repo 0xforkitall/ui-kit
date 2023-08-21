@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import { forwardRef } from 'react';
+import { responsiveUtils } from '../../utils';
 import { type ILayoutProps } from './layout.api';
-import { responsiveUtils } from '/utils';
 
 export const Layout = forwardRef<HTMLDivElement, ILayoutProps>((props, ref) => {
     const {

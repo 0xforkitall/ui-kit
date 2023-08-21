@@ -1,5 +1,3 @@
-@use "./breakpoints";
-
 // Styles the scrollbar using the scrollbar global variables
 @mixin style-scrollbar() {
   overscroll-behavior: auto;

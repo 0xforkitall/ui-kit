@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React from 'react';
+import { responsiveUtils } from '../../utils';
 import type { ITextProps, TextSize, TextTag } from './text.api';
-import { responsiveUtils } from '/utils';
 
 const sizeToTag: Record<TextSize, TextTag> = {
     h1: 'h1',

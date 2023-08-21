@@ -1,0 +1,52 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Design System/Breakpoints" />
+
+# Breakpoints
+
+Breakpoints are predefined screen width values that define the responsive behavior of the UI at different screen sizes.
+They allow for consistent styling adjustments based on the user's device or viewport dimensions.
+
+The UI Kit defines the following breakpoints:
+
+-   **Extra Extra Large (XXL):** Screen width from 1441px onwards.
+-   **Extra Large (XL):** Screen width from 1200px to 1440px.
+-   **Large (LG):** Screen width from 1025px to 1200px.
+-   **Medium (MD):** Screen width from 769px to 1024px.
+-   **Small (SM):** Screen width from 441px to 768px.
+-   **Extra Small (XS):** Screen width from 0px to 440px.
+
+These breakpoints provide a structured way to adjust layout, typography, and other design elements to ensure optimal
+readability and usability across various devices and screen sizes.
+
+The `$forkitall-breakpoint-list` map is ordered from the highest breakpoint to the lowest, enabling correct media query
+prioritization when iterating through the list for responsive styling. You can use these breakpoint values in your Sass
+styles to create responsive designs that adapt gracefully to different screens.
+
+## Usage Examples
+
+### Media Queries
+
+You can use the defined breakpoints to create media queries in your stylesheets. For instance, here's how you might
+use the breakpoints to adjust a component's style based on different screen sizes:
+
+```scss
+@use '@0xforkitall/ui-kit/src/styles/breakpoints/breakpoints';
+
+.my-component {
+    width: 100%;
+
+    @media screen and (max-width: breakpoints.$forkitall-breakpoint-md) {
+        width: 50%;
+    }
+
+    @media screen and (max-width: breakpoints.$forkitall-breakpoint-sm) {
+        width: 100%;
+    }
+}
+```
+
+### React Usage
+
+Use the [useBreakpoint](../?path=/docs/ui-kit-hooks-usebreakpoint--docs) hook for a programmatic way to manage and
+react to breakpoints within your components.

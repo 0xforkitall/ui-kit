@@ -1,5 +1,5 @@
 import { type HTMLAttributes } from 'react';
-import { type IResponsiveAttribute } from '/types';
+import { type IResponsiveAttribute } from '../../types';
 
 export type TextTag = 'p' | 'span' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5';
 export type TextSize = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'xl' | 'l' | 'm' | 's' | 'inherit';

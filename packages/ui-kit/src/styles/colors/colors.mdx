@@ -1,0 +1,89 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Design System/Colors" />
+
+export const ColorBox = ({ color }) => (
+    <span style={{ backgroundColor: `var(${color})`, display: 'inline-block', width: 15, height: 15 }} />
+);
+
+# Colors
+
+Colors are an integral part of any design system, contributing to the visual identity and user experience of an
+application. The UI Kit defines a set of color variables that can be used to create consistent and visually appealing
+interfaces.
+
+## Color Palette
+
+The UI Kit's color palette includes a range of primary, gray, orange, red, and green colors. Here's an overview of the
+color variables defined:
+
+### Primary Colors
+
+-   <ColorBox color="--0xf-color-primary-100" /> **Primary 100:** `--0xf-color-primary-100`
+-   <ColorBox color="--0xf-color-primary-200" /> **Primary 200:** `--0xf-color-primary-200`
+-   <ColorBox color="--0xf-color-primary-300" /> **Primary 300:** `--0xf-color-primary-300`
+-   <ColorBox color="--0xf-color-primary-400" /> **Primary 400:** `--0xf-color-primary-400`
+-   <ColorBox color="--0xf-color-primary-500" /> **Primary 500:** `--0xf-color-primary-500`
+-   <ColorBox color="--0xf-color-primary-600" /> **Primary 600:** `--0xf-color-primary-600`
+-   <ColorBox color="--0xf-color-primary-700" /> **Primary 700:** `--0xf-color-primary-700`
+-   <ColorBox color="--0xf-color-primary-800" /> **Primary 800:** `--0xf-color-primary-800`
+-   <ColorBox color="--0xf-color-primary-900" /> **Primary 900:** `--0xf-color-primary-900`
+
+### Gray Colors
+
+The gray scale provides a variety of neutral tones for UI elements.
+
+-   <ColorBox color="--0xf-color-gray-50" /> **Gray 50:** `--0xf-color-gray-50`
+-   <ColorBox color="--0xf-color-gray-100" /> **Gray 100:** `--0xf-color-gray-100`
+-   <ColorBox color="--0xf-color-gray-200" /> **Gray 200:** `--0xf-color-gray-200`
+-   <ColorBox color="--0xf-color-gray-300" /> **Gray 300:** `--0xf-color-gray-300`
+-   <ColorBox color="--0xf-color-gray-400" /> **Gray 400:** `--0xf-color-gray-400`
+-   <ColorBox color="--0xf-color-gray-500" /> **Gray 500:** `--0xf-color-gray-500`
+-   <ColorBox color="--0xf-color-gray-600" /> **Gray 600:** `--0xf-color-gray-600`
+-   <ColorBox color="--0xf-color-gray-700" /> **Gray 700:** `--0xf-color-gray-700`
+-   <ColorBox color="--0xf-color-gray-800" /> **Gray 800:** `--0xf-color-gray-800`
+-   <ColorBox color="--0xf-color-gray-900" /> **Gray 900:** `--0xf-color-gray-900`
+-   <ColorBox color="--0xf-color-gray-950" /> **Gray 950:** `--0xf-color-gray-950`
+
+### Other Colors
+
+-   <ColorBox color="--0xf-color-orange-100" /> **Orange 100:** `--0xf-color-orange-100`
+-   <ColorBox color="--0xf-color-orange-300" /> **Orange 300:** `--0xf-color-orange-300`
+-   <ColorBox color="--0xf-color-orange-500" /> **Orange 500:** `--0xf-color-orange-500`
+-   <ColorBox color="--0xf-color-orange-700" /> **Orange 700:** `--0xf-color-orange-700`
+-   <ColorBox color="--0xf-color-orange-900" /> **Orange 900:** `--0xf-color-orange-900`
+
+-   <ColorBox color="--0xf-color-red-100" /> **Red 100:** `--0xf-color-red-100`
+-   <ColorBox color="--0xf-color-red-300" /> **Red 300:** `--0xf-color-red-300`
+-   <ColorBox color="--0xf-color-red-500" /> **Red 500:** `--0xf-color-red-500`
+-   <ColorBox color="--0xf-color-red-700" /> **Red 700:** `--0xf-color-red-700`
+-   <ColorBox color="--0xf-color-red-900" /> **Red 900:** `--0xf-color-red-900`
+
+-   <ColorBox color="--0xf-color-green-100" /> **Green 100:** `--0xf-color-green-100`
+-   <ColorBox color="--0xf-color-green-300" /> **Green 300:** `--0xf-color-green-300`
+-   <ColorBox color="--0xf-color-green-500" /> **Green 500:** `--0xf-color-green-500`
+-   <ColorBox color="--0xf-color-green-700" /> **Green 700:** `--0xf-color-green-700`
+-   <ColorBox color="--0xf-color-green-900" /> **Green 900:** `--0xf-color-green-900`
+
+### Aliases
+
+The UI Kit also defines some convenient color aliases for common use cases:
+
+-   <ColorBox color="--0xf-color-inherit" /> **Inherit Color:** `--0xf-color-inherit`
+-   <ColorBox color="--0xf-color-white" /> **White:** `--0xf-color-white`
+-   <ColorBox color="--0xf-color-black" /> **Black:** `--0xf-color-black`
+-   <ColorBox color="--0xf-color-muted" /> **Muted:** `--0xf-color-muted`
+
+-   <ColorBox color="--0xf-color-primary" /> **Primary Color:** `--0xf-color-primary`
+-   <ColorBox color="--0xf-color-surface" /> **Surface Color:** `--0xf-color-surface`
+-   <ColorBox color="--0xf-color-divider" /> **Divider Color:** `--0xf-color-divider`
+
+-   <ColorBox color="--0xf-color-success" /> **Success Color:** `--0xf-color-success`
+-   <ColorBox color="--0xf-color-error" /> **Error Color:** `--0xf-color-error`
+-   <ColorBox color="--0xf-color-warning" /> **Warning Color:** `--0xf-color-warning`
+
+-   <ColorBox color="--0xf-color-body-background-color" /> **Body Background Color:** `--0xf-color-body-background-color`
+-   <ColorBox color="--0xf-color-body-color" /> **Body Text Color:** `--0xf-color-body-color`
+
+These color variables can be utilized throughout your UI components and styles to ensure consistency and coherence in
+your design system.

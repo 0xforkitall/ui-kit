@@ -1,0 +1,49 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="UI Kit/Hooks/useColorTheme" />
+
+# useColorTheme
+
+The `useColorTheme` hook is a custom React hook that provides functionality to manage and update the color theme of
+your application.
+
+## Usage
+
+```tsx
+import { useColorTheme } from '@0xforkitall/ui-kit';
+
+const App = () => {
+    const { currentTheme, updateTheme } = useColorTheme();
+
+    const toggleTheme = () => {
+        const newTheme = currentTheme === 'LIGHT' ? 'DARK' : 'LIGHT';
+        updateTheme(newTheme);
+    };
+
+    return (
+        <div>
+            <h1>My App</h1>
+            <p>Current Theme: {currentTheme}</p>
+            <button onClick={toggleTheme}>Toggle Theme</button>
+        </div>
+    );
+};
+```
+
+## Return Value
+
+The `useColorTheme` hook returns an object with the following properties:
+
+### `currentTheme` (ColorTheme, default: ColorTheme.DARK)
+
+The theme that is currently applied to the application.
+
+### `updateTheme` (function)
+
+A function that takes a `newTheme` parameter of type `ColorTheme` and updates the current theme of the application.
+
+## Notes
+
+-   The `useColorTheme` hook allows you to set the current theme and update it dynamically using the `updateTheme` function.
+-   The current theme is reflected on the `document.documentElement` element's `className` property, allowing for global
+    theme styling changes.

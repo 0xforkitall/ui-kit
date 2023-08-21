@@ -3,15 +3,15 @@
   --0xf-font-size-base: 20px;
   --0xf-font-size-inherit: inherit;
 
-  --0xf-font-size-75: calc(var(--0xf-font-size-base) * 3 / 4); // 12px
-  --0xf-font-size-87: calc(var(--0xf-font-size-base) * 7 / 8); // 14px
-  --0xf-font-size-100: var(--0xf-font-size-base); // 16px
-  --0xf-font-size-125: calc(var(--0xf-font-size-base) * 5 / 4); // 20px
-  --0xf-font-size-150: calc(var(--0xf-font-size-base) * 3 / 2); // 24px
-  --0xf-font-size-200: calc(var(--0xf-font-size-base) * 2); // 32px
-  --0xf-font-size-250: calc(var(--0xf-font-size-base) * 5 / 2); // 40px
-  --0xf-font-size-300: calc(var(--0xf-font-size-base) * 3); // 48px
-  --0xf-font-size-400: calc(var(--0xf-font-size-base) * 4); // 64px
+  --0xf-font-size-75: calc(var(--0xf-font-size-base) * 3 / 4);
+  --0xf-font-size-87: calc(var(--0xf-font-size-base) * 7 / 8);
+  --0xf-font-size-100: var(--0xf-font-size-base);
+  --0xf-font-size-125: calc(var(--0xf-font-size-base) * 5 / 4);
+  --0xf-font-size-150: calc(var(--0xf-font-size-base) * 3 / 2);
+  --0xf-font-size-200: calc(var(--0xf-font-size-base) * 2);
+  --0xf-font-size-250: calc(var(--0xf-font-size-base) * 5 / 2);
+  --0xf-font-size-300: calc(var(--0xf-font-size-base) * 3);
+  --0xf-font-size-400: calc(var(--0xf-font-size-base) * 4);
 
   /* Font weights */
   --0xf-font-weight-light: 300;

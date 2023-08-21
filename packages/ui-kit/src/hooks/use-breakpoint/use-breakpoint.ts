@@ -1,8 +1,8 @@
 'use client';
 
 import { useCallback, useEffect, useState } from 'react';
-import type { Breakpoint } from '/types';
-import { breakpointUtils } from '/utils';
+import type { Breakpoint } from '../../types';
+import { breakpointUtils } from '../../utils';
 
 export type BreakpointListener = (breakpoint: Breakpoint) => void;
 

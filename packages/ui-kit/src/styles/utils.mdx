@@ -1,0 +1,35 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Design System/Utils" />
+
+# Utils
+
+The UI Kit includes a range of utility styles that can be easily integrated into your application to ensure consistent
+styling and behavior.
+
+## `style-scrollbar`
+
+The `style-scrollbar` mixin includes various CSS properties and pseudo-elements to target both vertical and horizontal
+scrollbars, ensuring a unified scrollbar style. It utilizes the following properties:
+
+### Usage Example
+
+To apply the `style-scrollbar` utility, follow these steps:
+
+1. Import the utility mixin in your SCSS stylesheet:
+
+    ```scss
+    @import '0xforkitall/ui-kit/src/styles/utils';
+    ```
+
+2. Apply the `style-scrollbar` utility to the desired element(s) within your stylesheet:
+
+    ```scss
+    .custom-scrollable-container {
+        overflow: auto;
+        @include style-scrollbar();
+    }
+    ```
+
+By utilizing the utility styles provided by the UI Kit, you can easily maintain a consistent design language and user
+experience across your application.

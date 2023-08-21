@@ -1,0 +1,7 @@
+.yarn
+.vercel
+node_modules
+coverage
+out
+dist
+storybook-static
