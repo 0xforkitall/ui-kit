@@ -22,6 +22,7 @@ const config = {
                 sass: { implementation: require('sass') },
             },
         },
+        getAbsolutePath('storybook-dark-mode'),
     ],
     framework: {
         name: getAbsolutePath('@storybook/react-webpack5'),
