@@ -1,5 +1,14 @@
 # @0xforkitall/ui-kit-nextjs
 
+## 0.4.1
+
+### Patch Changes
+
+-   [`9620da7`](https://github.com/0xforkitall/ui-kit/commit/9620da7f80c74d6d26df6a9ef6d752d0bc35a8a6) Thanks [@0xforkitall](https://github.com/0xforkitall)! - Fix released package build
+
+-   Updated dependencies [[`9620da7`](https://github.com/0xforkitall/ui-kit/commit/9620da7f80c74d6d26df6a9ef6d752d0bc35a8a6)]:
+    -   @0xforkitall/ui-kit@0.4.1
+
 ## 0.4.0
 
 ### Minor Changes
