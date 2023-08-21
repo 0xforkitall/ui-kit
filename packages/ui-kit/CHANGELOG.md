@@ -1,5 +1,15 @@
 # @0xforkitall/ui-kit
 
+## 0.4.0
+
+### Minor Changes
+
+-   [#13](https://github.com/0xforkitall/ui-kit/pull/13) [`1cb05b4`](https://github.com/0xforkitall/ui-kit/commit/1cb05b448d3783220b3da123740531b76c07b8b0) Thanks [@0xforkitall](https://github.com/0xforkitall)! - Add documentation to Breadcrumbs, Button, Chip and Link components
+
+### Patch Changes
+
+-   [#13](https://github.com/0xforkitall/ui-kit/pull/13) [`1cb05b4`](https://github.com/0xforkitall/ui-kit/commit/1cb05b448d3783220b3da123740531b76c07b8b0) Thanks [@0xforkitall](https://github.com/0xforkitall)! - Remove import aliases
+
 ## 0.3.2
 
 ### Patch Changes
