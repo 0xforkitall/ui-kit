@@ -1,10 +1,6 @@
 # @0xforkitall/ui-kit-docs
 
-TODO
-
-## Usage
-
-TODO
+Documentation of the design system and the UI-Kit components and utilities.
 
 ## Contributing
 

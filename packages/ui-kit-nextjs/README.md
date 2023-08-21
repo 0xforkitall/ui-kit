@@ -1,18 +1,31 @@
 # @0xforkitall/ui-kit-nextjs
 
-TODO
+UI components and utilities for NextJs applications.
 
 ## Installation
 
-Use npm or yarn to install the package:
+Use npm or yarn to install the required packages:
 
 ```
-yarn add --dev @0xforkitall/ui-kit-nextjs
+yarn add @0xforkitall/ui-kit @0xforkitall/ui-kit-nextjs
 ```
 
 ## Usage
 
-TODO
+Import the ui-kit styles and start using the package in your application:
+
+```
+import React from 'react';
+import { Link } from '@0xforkitall/ui-kit-nextjs';
+import '@0xforkitall/ui-kit/styles.scss';
+import '@0xforkitall/ui-kit-nextjs/styles.scss';
+
+export const Application: React.FC = () => {
+    <Link variant="underline" href="/page">
+        UI-Kit-NextJs link
+    </Link>
+}
+```
 
 ## Contributing
 
