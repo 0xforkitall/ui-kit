@@ -87,7 +87,9 @@ jobs:
       - name: Restore cached builds
         uses: actions/cache@v3.3.1
         with:
-          path: ${{ github.workspace }}/packages/*/dist
+          path: |
+            ${{ github.workspace }}/packages/*/dist
+            ${{ github.workspace }}/packages/docs/storybook-static
           key: ${{ github.ref }}-${{ github.sha }}
       - name: Create/Update release PR or publish to NPM
         uses: changesets/action@v1.4.5
