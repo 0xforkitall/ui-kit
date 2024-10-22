@@ -32,7 +32,7 @@ jobs:
       - name: Build packages
         run: yarn build
       - name: Cache builds
-        uses: actions/cache@v3.3.1
+        uses: actions/cache@v4.1.2
         with:
           path: |
             ${{ github.workspace }}/packages/*/dist
@@ -55,7 +55,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
       - name: Restore cached builds
-        uses: actions/cache@v3.3.1
+        uses: actions/cache@v4.1.2
         with:
           path: |
             ${{ github.workspace }}/packages/*/dist
@@ -85,7 +85,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
       - name: Restore cached builds
-        uses: actions/cache@v3.3.1
+        uses: actions/cache@v4.1.2
         with:
           path: |
             ${{ github.workspace }}/packages/*/dist
@@ -114,7 +114,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
       - name: Restore cached build
-        uses: actions/cache@v3.3.1
+        uses: actions/cache@v4.1.2
         with:
           path: |
             ${{ github.workspace }}/packages/*/dist
